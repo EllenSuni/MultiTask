@@ -1,0 +1,71 @@
+@import "variables";
+
+.react-calendar {
+  max-width: 335px;
+  width: 100%;
+  background-color: $dark-color;
+  padding: 20px;
+  border-radius: 8px;
+
+  &__navigation {
+    display: flex;
+    margin-bottom: 27px;
+
+    &__arrow {
+      color: $light-color;
+      font-size: 2rem;
+    }
+
+    &__label {
+      font-family: $font-stack;
+      font-size: 2rem;
+      color: $light-color;
+    }
+  }
+
+  &__month-view {
+    &__weekdays {
+      border-bottom: 2px solid $light-color;
+      margin-bottom: 10px;
+      &__weekday {
+        text-align: center;
+
+        & abbr[title] {
+          color: $light-color;
+          font-family: $font-stack;
+          font-size: 1rem;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__days {
+      height: 200px;
+      &__day {
+        text-align: end;
+        & abbr {
+          color: $light-color;
+          font-family: $font-stack;
+          font-size: 0.9rem;
+        }
+
+        &--neighboringMonth abbr {
+          opacity: 50%;
+        }
+      }
+    }
+  }
+
+  &__tile abbr {
+    padding: 5px 8px;
+  }
+  &__tile--now abbr {
+    background-color: #cbcbc085;
+    border-radius: 50%;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+}

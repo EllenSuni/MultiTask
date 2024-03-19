@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Handlee;
+  src: url("/src/assets/Handlee-Regular.ttf") format("truetype");
+}
+.react-calendar {
+  max-width: 335px;
+  width: 100%;
+  background-color: #5e5e4a;
+  padding: 20px;
+  border-radius: 8px;
+}
+.react-calendar__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 27px;
+}
+.react-calendar__navigation__arrow {
+  color: #f2efec;
+  font-size: 2rem;
+}
+.react-calendar__navigation__label {
+  font-family: "Handlee", cursive;
+  font-size: 2rem;
+  color: #f2efec;
+}
+.react-calendar__month-view__weekdays {
+  border-bottom: 2px solid #f2efec;
+  margin-bottom: 10px;
+}
+.react-calendar__month-view__weekdays__weekday {
+  text-align: center;
+}
+.react-calendar__month-view__weekdays__weekday abbr[title] {
+  color: #f2efec;
+  font-family: "Handlee", cursive;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.react-calendar__month-view__days {
+  height: 200px;
+}
+.react-calendar__month-view__days__day {
+  text-align: end;
+}
+.react-calendar__month-view__days__day abbr {
+  color: #f2efec;
+  font-family: "Handlee", cursive;
+  font-size: 0.9rem;
+}
+.react-calendar__month-view__days__day--neighboringMonth abbr {
+  opacity: 50%;
+}
+.react-calendar__tile abbr {
+  padding: 5px 8px;
+}
+.react-calendar__tile--now abbr {
+  background-color: rgba(203, 203, 192, 0.5215686275);
+  border-radius: 50%;
+}
+.react-calendar button {
+  border: none;
+  background: none;
+}
