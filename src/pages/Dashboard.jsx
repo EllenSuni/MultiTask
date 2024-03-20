@@ -1,4 +1,4 @@
-import CalendarView from "../components/calendar"
+import CalendarView from "../components/Calendar"
 
 function Dashboard() {
   return (

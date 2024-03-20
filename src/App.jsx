@@ -1,35 +1,14 @@
 import './App.css'
 import Dashboard from './pages/Dashboard'
 import ProjectPage from './pages/ProjectPage'
+import Navbar from "./components/Navbar"
 
 import {
   createHashRouter,
-  Link,
   Outlet,
   RouterProvider
 } from 'react-router-dom'
 
-function Root() {
-  return (
-    <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/project">Project</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <Outlet />
-      </main>
-    </>
-  )
-}
 
 function App() {
   const router = createHashRouter([
@@ -39,7 +18,16 @@ function App() {
         {element: <ProjectPage/>, path: "/project"}
       ],
 
-      element: <Root/>
+      element: (
+        <>
+          <header>
+            <Navbar/>
+          </header>
+          <main>
+            <Outlet />
+          </main>
+        </>
+      )
     }
   ])
 
