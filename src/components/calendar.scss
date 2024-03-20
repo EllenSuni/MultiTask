@@ -1,8 +1,7 @@
 @import "./variables";
 
 .react-calendar {
-  max-width: 335px;
-  width: 100%;
+  width: 380px;
   background-color: $dark-color;
   color: $light-color;
   padding: 20px;
@@ -14,6 +13,7 @@
 
     &__arrow,
     &__label {
+      font-family: inherit;
       color: inherit;
       font-size: 2rem;
     }
@@ -21,6 +21,7 @@
 
   &__month-view {
     &__weekdays {
+      font-family: inherit;
       border-bottom: 2px solid $light-color;
       margin-bottom: 10px;
 
@@ -37,6 +38,7 @@
     &__days {
       height: 200px;
       &__day {
+        font-family: inherit;
         color: inherit;
         text-align: end;
         & abbr {
@@ -50,8 +52,12 @@
     }
   }
 
+  &__tile {
+    font-family: inherit;
+    color: $light-color;
+  }
   &__tile abbr {
-    padding: 5px 8px;
+    padding: 5px;
   }
   &__tile--now abbr {
     background-color: #cbcbc085;

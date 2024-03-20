@@ -17,6 +17,7 @@ function App() {
         <>
           <Header />
           <main>
+            <h1>MultiTask</h1>
             <Outlet />
           </main>
         </>

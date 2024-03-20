@@ -9,7 +9,7 @@
 }
 
 #root {
-  display: grid;
-  grid-template-columns: 300px auto;
+  display: flex;
   background: $light-color;
+  font-family: "Handlee", cursive;
 }
