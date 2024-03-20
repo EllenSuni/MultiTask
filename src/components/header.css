@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Handlee;
+  src: url("/src/assets/Handlee-Regular.ttf") format("truetype");
+}
+.header {
+  border: 1px solid red;
+  background-color: #5e5e4a;
+}

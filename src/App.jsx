@@ -1,7 +1,7 @@
 import './App.css'
 import Dashboard from './pages/Dashboard'
 import ProjectPage from './pages/ProjectPage'
-import Navbar from "./components/Navbar"
+import Header from "./components/Header"
 
 import {
   createHashRouter,
@@ -20,9 +20,7 @@ function App() {
 
       element: (
         <>
-          <header>
-            <Navbar/>
-          </header>
+          <Header/>
           <main>
             <Outlet />
           </main>

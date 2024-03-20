@@ -1,9 +1,10 @@
-@import "variables";
+@import "./variables";
 
 .react-calendar {
   max-width: 335px;
   width: 100%;
   background-color: $dark-color;
+  color: $light-color;
   padding: 20px;
   border-radius: 8px;
 
@@ -11,15 +12,10 @@
     display: flex;
     margin-bottom: 27px;
 
-    &__arrow {
-      color: $light-color;
-      font-size: 2rem;
-    }
-
+    &__arrow,
     &__label {
-      font-family: $font-stack;
+      color: inherit;
       font-size: 2rem;
-      color: $light-color;
     }
   }
 
@@ -27,12 +23,11 @@
     &__weekdays {
       border-bottom: 2px solid $light-color;
       margin-bottom: 10px;
+
       &__weekday {
         text-align: center;
 
         & abbr[title] {
-          color: $light-color;
-          font-family: $font-stack;
           font-size: 1rem;
           text-decoration: none;
         }
@@ -42,10 +37,9 @@
     &__days {
       height: 200px;
       &__day {
+        color: inherit;
         text-align: end;
         & abbr {
-          color: $light-color;
-          font-family: $font-stack;
           font-size: 0.9rem;
         }
 
@@ -62,10 +56,5 @@
   &__tile--now abbr {
     background-color: #cbcbc085;
     border-radius: 50%;
-  }
-
-  button {
-    border: none;
-    background: none;
   }
 }
