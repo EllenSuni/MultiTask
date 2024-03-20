@@ -1,2 +1,4 @@
-@use "./components/calendar.scss";
-@use "./components/header.scss";
+main {
+  grid-column: 2 / 3;
+  margin: auto;
+}

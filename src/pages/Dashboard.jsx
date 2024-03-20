@@ -1,12 +1,11 @@
-import CalendarView from "../components/Calendar"
+import CalendarView from "../components/Calendar";
 
 function Dashboard() {
   return (
     <>
-    <h1>Dashboard</h1>
-    <CalendarView/>
+      <CalendarView />
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

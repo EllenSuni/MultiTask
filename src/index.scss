@@ -1,4 +1,15 @@
+@use "./components/calendar.scss";
+@use "./components/header.scss";
+
+@import "./components/variables";
+
 @font-face {
   font-family: Handlee;
   src: url("/src/assets/Handlee-Regular.ttf") format("truetype");
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 300px auto;
+  background: $light-color;
 }

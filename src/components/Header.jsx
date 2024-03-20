@@ -1,21 +1,35 @@
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Header() {
   return (
-    <header className="header">
-      <h4>Username</h4>
+    <header>
       <nav>
-        <ul>
+        <ul className="nav-list">
+          <li className="username">Username</li>
           <li>
-            <Link to="/">Dashboard</Link>
+            <Link
+              to="/"
+              className="link">
+              Dashboard
+            </Link>
           </li>
           <li>
-            <Link to="/project">Project</Link>
+            <Link
+              to="/project"
+              className="link">
+              Projects
+            </Link>
+            <ul className="project-list">
+              <li className="project-list__item">Project 1</li>
+              <li className="project-list__item">Project 2</li>
+              <li className="project-list__item">Project 3</li>
+            </ul>
           </li>
+          <li className="settings">Settings</li>
         </ul>
       </nav>
     </header>
   );
 }
 
-export default Navbar;
+export default Header;
