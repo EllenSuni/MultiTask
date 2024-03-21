@@ -1,0 +1,45 @@
+@import "./variables";
+
+.project {
+  border: 1.5px solid $dark-color;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #5e5e4a25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 29px;
+
+  &__heading {
+    color: $dark-color;
+    text-decoration: underline;
+  }
+
+  &__task {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    gap: 20px;
+
+    &__checkbox {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      // visibility: hidden;
+      &::before {
+        visibility: visible;
+        content: "";
+        width: 18px;
+        height: 18px;
+        border: 1.5px solid $dark-color;
+        border-radius: 4px;
+        position: absolute;
+      }
+    }
+
+    &__title {
+      color: $dark-color;
+      font-size: 1.2rem;
+    }
+  }
+}
