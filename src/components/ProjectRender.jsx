@@ -25,8 +25,13 @@ function ProjectRender() {
               <input
                 type="checkbox"
                 className="project__task__checkbox"
+                id={task.id}
               />
-              <label className="project__task__title">{task.title}</label>
+              <label
+                className="project__task__title"
+                htmlFor={task.id}>
+                {task.title}
+              </label>
               {/* Point label to checkbox */}
             </div>
           ))}

@@ -18,14 +18,13 @@
     margin-top: 10px;
     display: flex;
     align-items: center;
-    border: 1px solid red;
     gap: 20px;
 
     &__checkbox {
       position: relative;
       width: 20px;
       height: 20px;
-      // visibility: hidden;
+
       &::before {
         visibility: visible;
         content: "";
