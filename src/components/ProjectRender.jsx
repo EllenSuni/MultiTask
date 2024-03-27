@@ -1,22 +1,27 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function ProjectRender() {
   const [tasks, setTasks] = useState([]);
+
+  const { projectName } = useParams();
 
   useEffect(() => {
     fetch("../data.json")
       .then((response) => response.json())
       .then((result) => {
-        // console.log(result.projects.Website.tasks);
-        setTasks(result.projects.Website.tasks);
-        // tasks.map((task) => console.log(task));
+        result.projects.findIndex((item, i) => {
+          if (item.name === projectName) {
+            setTasks(result.projects[i].tasks);
+          }
+        });
       });
-  }, []);
+  }, [projectName]);
 
   return (
     <>
       <div className="project">
-        <h2 className="project__heading">Project 1</h2>
+        <h2 className="project__heading">{projectName}</h2>
         <div>
           {tasks.map((task) => (
             <div
@@ -32,7 +37,6 @@ function ProjectRender() {
                 htmlFor={task.id}>
                 {task.title}
               </label>
-              {/* Point label to checkbox */}
             </div>
           ))}
         </div>

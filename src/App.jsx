@@ -10,7 +10,7 @@ function App() {
     {
       children: [
         { element: <Dashboard />, path: "/" },
-        { element: <ProjectPage />, path: "/project" },
+        { element: <ProjectPage />, path: "/project/:projectName" },
       ],
 
       element: (

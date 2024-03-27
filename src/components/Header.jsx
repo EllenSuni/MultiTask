@@ -31,7 +31,11 @@ function Header() {
                 <li
                   key={project.projectID}
                   className="project-link">
-                  <Link className="link">{project.name}</Link>
+                  <Link
+                    to={`/project/${project.name}`}
+                    className="link">
+                    {project.name}
+                  </Link>
                 </li>
               ))}
             </ul>
