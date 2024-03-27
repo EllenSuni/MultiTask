@@ -4,8 +4,8 @@ import ProjectRender from "../components/ProjectRender";
 function Dashboard() {
   return (
     <>
-      <CalendarView />
       <ProjectRender />
+      <CalendarView />
     </>
   );
 }

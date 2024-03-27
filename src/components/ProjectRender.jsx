@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function ProjectRender() {
-  const [tasks, setTasks] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   const { projectName } = useParams();
 
@@ -13,38 +13,42 @@ function ProjectRender() {
         if (projectName) {
           result.projects.findIndex((item, i) => {
             if (item.name === projectName) {
-              setTasks(result.projects[i].tasks);
+              setProjects([result.projects[i]]);
             }
           });
         } else {
-          // Have all projects in array
+          setProjects(result.projects);
         }
       });
   }, [projectName]);
 
   return (
     <>
-      <div className="project">
-        <h2 className="project__heading">{projectName}</h2>
-        <div>
-          {tasks.map((task) => (
-            <div
-              key={task.id}
-              className="project__task">
-              <input
-                type="checkbox"
-                className="project__task__checkbox"
-                id={task.id}
-              />
-              <label
-                className="project__task__title"
-                htmlFor={task.id}>
-                {task.title}
-              </label>
-            </div>
-          ))}
+      {projects.map((project) => (
+        <div
+          className="project"
+          key={project.projectID}>
+          <h2 className="project__heading">{projectName || project.name}</h2>
+          <div>
+            {project.tasks.map((task) => (
+              <div
+                key={task.id}
+                className="project__task">
+                <input
+                  type="checkbox"
+                  className="project__task__checkbox"
+                  id={task.id}
+                />
+                <label
+                  className="project__task__title"
+                  htmlFor={task.id}>
+                  {task.title}
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </>
   );
 }
