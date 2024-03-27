@@ -10,11 +10,15 @@ function ProjectRender() {
     fetch("../data.json")
       .then((response) => response.json())
       .then((result) => {
-        result.projects.findIndex((item, i) => {
-          if (item.name === projectName) {
-            setTasks(result.projects[i].tasks);
-          }
-        });
+        if (projectName) {
+          result.projects.findIndex((item, i) => {
+            if (item.name === projectName) {
+              setTasks(result.projects[i].tasks);
+            }
+          });
+        } else {
+          // Have all projects in array
+        }
       });
   }, [projectName]);
 
