@@ -1,28 +1,39 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetch("../data.json")
+      .then((response) => response.json())
+      .then((result) => {
+        setProjects(result.projects);
+      });
+  }, []);
+
   return (
     <header>
       <nav>
         <ul className="nav-list">
           <li className="username">Username</li>
-          <li>
+          <li className="dashboard">
             <Link
               to="/"
               className="link">
               Dashboard
             </Link>
           </li>
-          <li>
-            <Link
-              to="/project"
-              className="link">
-              Projects
-            </Link>
-            <ul className="project-list">
-              <li className="project-list__item">Project 1</li>
-              <li className="project-list__item">Project 2</li>
-              <li className="project-list__item">Project 3</li>
+          <li className="projects">
+            Projects
+            <ul>
+              {projects.map((project) => (
+                <li
+                  key={project.projectID}
+                  className="project-link">
+                  <Link className="link">{project.name}</Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li className="settings">Settings</li>

@@ -18,6 +18,17 @@ header {
       font-size: 1.8rem;
     }
 
+    & .dashboard,
+    & .projects {
+      font-size: 1.7rem;
+    }
+
+    & .project-link {
+      font-size: 1.1rem;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
     & .settings {
       margin-top: auto;
       font-size: 1.2rem;
@@ -26,7 +37,6 @@ header {
     & .link {
       text-decoration: none;
       color: $light-color;
-      font-size: 1.7rem;
 
       &:hover {
         text-decoration: underline;

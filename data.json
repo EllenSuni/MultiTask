@@ -1,6 +1,8 @@
 {
-  "projects": {
-    "Easter party": {
+  "projects": [
+    {
+      "name": "Easter party",
+      "projectID": 25,
       "tasks": [
         {
           "title": "Bake bread",
@@ -22,7 +24,9 @@
         }
       ]
     },
-    "Website": {
+    {
+      "name": "Website",
+      "projectID": 26,
       "tasks": [
         {
           "title": "Routing",
@@ -56,7 +60,9 @@
         }
       ]
     },
-    "Movies to watch": {
+    {
+      "name": "Movies to watch",
+      "projectID": 27,
       "tasks": [
         {
           "title": "Lion king",
@@ -96,5 +102,5 @@
         }
       ]
     }
-  }
+  ]
 }
