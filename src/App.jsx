@@ -1,6 +1,7 @@
 import "./App.css";
-import Dashboard from "./pages/Dashboard";
+import DashboardPage from "./pages/DashboardPage";
 import ProjectPage from "./pages/ProjectPage";
+import ProfilePage from "./pages/ProfilePage";
 import Header from "./components/Header";
 
 import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
@@ -9,8 +10,9 @@ function App() {
   const router = createHashRouter([
     {
       children: [
-        { element: <Dashboard />, path: "/" },
+        { element: <DashboardPage />, path: "/" },
         { element: <ProjectPage />, path: "/project/:projectName" },
+        { element: <ProfilePage />, path: "/profile" },
       ],
 
       element: (

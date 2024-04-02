@@ -1,7 +1,7 @@
 import CalendarView from "../components/Calendar";
 import ProjectRender from "../components/ProjectRender";
 
-function Dashboard() {
+function DashboardPage() {
   return (
     <>
       <ProjectRender />
@@ -10,4 +10,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default DashboardPage;

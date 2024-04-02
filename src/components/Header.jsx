@@ -16,7 +16,13 @@ function Header() {
     <header>
       <nav>
         <ul className="nav-list">
-          <li className="username">Username</li>
+          <li className="username">
+            <Link
+              to="/profile"
+              className="link">
+              Username here
+            </Link>
+          </li>
           <li className="dashboard">
             <Link
               to="/"
