@@ -5,11 +5,14 @@ header {
   border-radius: 0 56px 56px 0;
   color: $light-color;
   width: 300px;
+  position: fixed;
+  max-height: 100dvh;
 
   & .nav-list {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    height: 100%;
     gap: 100px;
     padding: 43px;
     list-style: none;
