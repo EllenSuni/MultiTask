@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import Context from "../Context";
 
 function Header() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]),
+    { user } = useContext(Context);
 
   useEffect(() => {
     fetch("../data.json")
       .then((response) => response.json())
       .then((result) => {
+        result = result.users[0];
         setProjects(result.projects);
       });
   }, []);
@@ -20,7 +23,8 @@ function Header() {
             <Link
               to="/profile"
               className="link">
-              Username here
+              {/* render username instead of email */}
+              {user.email || "Log in"}
             </Link>
           </li>
           <li className="dashboard">

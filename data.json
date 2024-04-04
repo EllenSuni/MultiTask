@@ -1,112 +1,120 @@
 {
-  "projects": [
+  "users": [
     {
-      "name": "Easter party",
-      "projectID": 25,
-      "tasks": [
+      "username": "Ellen",
+      "email": "ellen@gmail.com",
+      "password": "hej",
+      "projects": [
         {
-          "title": "Bake bread",
-          "done": false,
-          "addedToToday": false,
-          "id": 1
+          "name": "Easter party",
+          "projectID": 25,
+          "tasks": [
+            {
+              "title": "Bake bread",
+              "done": false,
+              "addedToToday": false,
+              "id": 1
+            },
+            {
+              "title": "Clean house",
+              "done": false,
+              "addedToToday": false,
+              "id": 2
+            },
+            {
+              "title": "Eat candy",
+              "done": false,
+              "addedToToday": false,
+              "id": 3
+            }
+          ]
         },
         {
-          "title": "Clean house",
-          "done": false,
-          "addedToToday": false,
-          "id": 2
+          "name": "Website",
+          "projectID": 26,
+          "tasks": [
+            {
+              "title": "Routing",
+              "done": false,
+              "addedToToday": false,
+              "id": 4
+            },
+            {
+              "title": "Design site",
+              "done": false,
+              "addedToToday": false,
+              "id": 5
+            },
+            {
+              "title": "Learn React",
+              "done": false,
+              "addedToToday": false,
+              "id": 6
+            },
+            {
+              "title": "Set up vite-project",
+              "done": false,
+              "addedToToday": false,
+              "id": 7
+            },
+            {
+              "title": "Find webhost",
+              "done": false,
+              "addedToToday": false,
+              "id": 8
+            }
+          ]
         },
         {
-          "title": "Eat candy",
-          "done": false,
-          "addedToToday": false,
-          "id": 3
-        }
-      ]
-    },
-    {
-      "name": "Website",
-      "projectID": 26,
-      "tasks": [
-        {
-          "title": "Routing",
-          "done": false,
-          "addedToToday": false,
-          "id": 4
-        },
-        {
-          "title": "Design site",
-          "done": false,
-          "addedToToday": false,
-          "id": 5
-        },
-        {
-          "title": "Learn React",
-          "done": false,
-          "addedToToday": false,
-          "id": 6
-        },
-        {
-          "title": "Set up vite-project",
-          "done": false,
-          "addedToToday": false,
-          "id": 7
-        },
-        {
-          "title": "Find webhost",
-          "done": false,
-          "addedToToday": false,
-          "id": 8
-        }
-      ]
-    },
-    {
-      "name": "Movies to watch",
-      "projectID": 27,
-      "tasks": [
-        {
-          "title": "Lion king",
-          "done": false,
-          "addedToToday": false,
-          "id": 9
-        },
-        {
-          "title": "Me, Earl and the dying girl",
-          "done": false,
-          "addedToToday": false,
-          "id": 10
-        },
-        {
-          "title": "Die Hard 2",
-          "done": false,
-          "addedToToday": false,
-          "id": 11
-        },
-        {
-          "title": "The departure",
-          "done": false,
-          "addedToToday": false,
-          "id": 12
-        },
-        {
-          "title": "Wolf of Wallstreet",
-          "done": false,
-          "addedToToday": false,
-          "id": 13
-        },
-        {
-          "title": "Titanic",
-          "done": false,
-          "addedToToday": false,
-          "id": 14
-        },
-        {
-          "title": "A really, really, really, really, really long title",
-          "done": false,
-          "addedToToday": false,
-          "id": 15
+          "name": "Movies to watch",
+          "projectID": 27,
+          "tasks": [
+            {
+              "title": "Lion king",
+              "done": false,
+              "addedToToday": false,
+              "id": 9
+            },
+            {
+              "title": "Me, Earl and the dying girl",
+              "done": false,
+              "addedToToday": false,
+              "id": 10
+            },
+            {
+              "title": "Die Hard 2",
+              "done": false,
+              "addedToToday": false,
+              "id": 11
+            },
+            {
+              "title": "The departure",
+              "done": false,
+              "addedToToday": false,
+              "id": 12
+            },
+            {
+              "title": "Wolf of Wallstreet",
+              "done": false,
+              "addedToToday": false,
+              "id": 13
+            },
+            {
+              "title": "Titanic",
+              "done": false,
+              "addedToToday": false,
+              "id": 14
+            },
+            {
+              "title": "A really, really, really, really, really long title",
+              "done": false,
+              "addedToToday": false,
+              "id": 15
+            }
+          ]
         }
       ]
     }
   ]
+
 }

@@ -4,7 +4,10 @@ import ProjectPage from "./pages/ProjectPage";
 import ProfilePage from "./pages/ProfilePage";
 import Header from "./components/Header";
 
+import Context from "./Context";
+
 import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
   const router = createHashRouter([
@@ -27,7 +30,14 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  const [user, setUser] = useState({ email: null, password: null }),
+    [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <Context.Provider value={{ user, setUser, isLoggedIn, setIsLoggedIn }}>
+      <RouterProvider router={router} />
+    </Context.Provider>
+  );
 }
 
 export default App;

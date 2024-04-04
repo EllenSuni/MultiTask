@@ -10,6 +10,7 @@ function ProjectRender() {
     fetch("../data.json")
       .then((response) => response.json())
       .then((result) => {
+        result = result.users[0];
         if (projectName) {
           result.projects.findIndex((item, i) => {
             if (item.name === projectName) {
