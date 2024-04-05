@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Context from "./Context";
 
 import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const router = createHashRouter([
@@ -30,11 +30,16 @@ function App() {
     },
   ]);
 
-  const [user, setUser] = useState({ email: null, password: null }),
-    [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState({ isLoggedIn: false });
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      setUser(JSON.parse(localStorage.getItem("user")));
+    }
+  }, []);
 
   return (
-    <Context.Provider value={{ user, setUser, isLoggedIn, setIsLoggedIn }}>
+    <Context.Provider value={{ user, setUser }}>
       <RouterProvider router={router} />
     </Context.Provider>
   );

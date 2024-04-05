@@ -1,24 +1,33 @@
 import { Formik, Form, Field } from "formik";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import Context from "../Context";
+import data from "../../data.json";
 
 function LogIn() {
-  const { user, setUser, isLoggedIn, setIsLoggedIn } = useContext(Context);
+  const { user, setUser } = useContext(Context);
 
-  useEffect(() => {
-    console.log(user);
-    console.log(isLoggedIn);
-  }, [isLoggedIn]);
+  function handleLogin(values) {
+    if (
+      data.users[0].email.includes(values.email) &&
+      data.users[0].password.includes(values.password)
+    ) {
+      setUser({ username: data.users[0].username, isLoggedIn: true });
+      console.log(user);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ username: data.users[0].username, isLoggedIn: true })
+      );
+    }
+  }
 
   return (
     <>
       <h2>Log in</h2>
       {user.email}
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: "ellen@gmail.com", password: "hej" }}
         onSubmit={(values) => {
-          setUser(values);
-          setIsLoggedIn(true);
+          handleLogin(values);
         }}>
         {() => (
           <Form>

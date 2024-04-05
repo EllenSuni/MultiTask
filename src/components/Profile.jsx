@@ -2,11 +2,11 @@ import { useContext } from "react";
 import Context from "../Context";
 
 function Profile() {
-  const { setIsLoggedIn, setUser } = useContext(Context);
+  const { setUser } = useContext(Context);
 
   function handleLogOut() {
-    setIsLoggedIn(false);
-    setUser({ email: null, password: null });
+    setUser({ isLoggedIn: false });
+    localStorage.setItem("user", JSON.stringify({ isLoggedIn: false }));
   }
 
   return (

@@ -4,12 +4,12 @@ import Profile from "../components/Profile";
 import Context from "../Context";
 
 function ProfilePage() {
-  const { isLoggedIn } = useContext(Context);
+  const { user } = useContext(Context);
 
   return (
     <>
       <h1>Profile</h1>
-      {isLoggedIn ? <Profile /> : <LogIn />}
+      {user.isLoggedIn ? <Profile /> : <LogIn />}
     </>
   );
 }
