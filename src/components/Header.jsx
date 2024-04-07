@@ -23,7 +23,6 @@ function Header() {
             <Link
               to="/profile"
               className="link">
-              {/* render username instead of email */}
               {user.username || "Log in"}
             </Link>
           </li>
@@ -37,17 +36,18 @@ function Header() {
           <li className="projects">
             Projects
             <ul>
-              {projects.map((project) => (
-                <li
-                  key={project.projectID}
-                  className="project-link">
-                  <Link
-                    to={`/project/${project.name}`}
-                    className="link">
-                    {project.name}
-                  </Link>
-                </li>
-              ))}
+              {user.isLoggedIn &&
+                projects.map((project) => (
+                  <li
+                    key={project.projectID}
+                    className="project-link">
+                    <Link
+                      to={`/project/${project.name}`}
+                      className="link">
+                      {project.name}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </li>
           <li className="settings">Settings</li>
