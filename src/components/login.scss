@@ -1,0 +1,27 @@
+@import "./variables";
+
+.log-in,
+Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: $dark-color;
+
+  & label {
+    font-weight: bold;
+
+    & .field {
+      font-family: inherit;
+      letter-spacing: 0.7px;
+      color: $dark-color;
+      padding: 4px;
+
+      background-color: $light-color;
+      border: 1.4px solid $dark-color;
+      border-radius: 6px;
+      box-shadow: inset 2px 2px 5px #5e5e4a33;
+    }
+    // border: 1px solid red;
+  }
+}

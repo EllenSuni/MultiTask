@@ -4,7 +4,7 @@ import Context from "../Context";
 import data from "../../data.json";
 
 function LogIn() {
-  const { user, setUser } = useContext(Context);
+  const { setUser } = useContext(Context);
 
   function handleLogin(values) {
     if (
@@ -20,9 +20,8 @@ function LogIn() {
   }
 
   return (
-    <>
+    <div className="log-in">
       <h2>Log in</h2>
-      {user.email}
       <Formik
         initialValues={{
           email: "ellen@gmail.com",
@@ -35,15 +34,17 @@ function LogIn() {
         {() => (
           <Form>
             <label>
-              Email:
+              Email:{" "}
               <Field
+                className="field"
                 type="email"
                 name="email"
               />
             </label>
             <label>
-              Password:
+              Password:{" "}
               <Field
+                className="field"
                 type="password"
                 name="password"
               />
@@ -52,7 +53,7 @@ function LogIn() {
           </Form>
         )}
       </Formik>
-    </>
+    </div>
   );
 }
 

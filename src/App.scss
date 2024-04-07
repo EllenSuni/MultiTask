@@ -11,4 +11,18 @@ main {
     font-size: 3rem;
     margin-block: 60px;
   }
+
+  button {
+    color: $light-color;
+    background-color: $dark-color;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 7px 24px;
+    border-radius: 6px;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }
