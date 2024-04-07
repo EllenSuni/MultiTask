@@ -1,8 +1,9 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Context from "../Context";
+import PropTypes from "prop-types";
 
-function ProjectRender() {
+function ProjectRender({ quote }) {
   const [projects, setProjects] = useState([]);
 
   const { projectName } = useParams(),
@@ -27,6 +28,7 @@ function ProjectRender() {
 
   return (
     <>
+      <h2 className="quote">{quote}</h2>
       {user.isLoggedIn &&
         projects.map((project) => (
           <div
@@ -56,5 +58,9 @@ function ProjectRender() {
     </>
   );
 }
+
+ProjectRender.propTypes = {
+  quote: PropTypes.string,
+};
 
 export default ProjectRender;

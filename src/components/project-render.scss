@@ -1,5 +1,10 @@
 @import "./variables";
 
+.quote {
+  color: $dark-color;
+  margin-bottom: 20px;
+}
+
 .project {
   border: 1.5px solid $dark-color;
   border-radius: 8px;

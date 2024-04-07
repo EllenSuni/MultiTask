@@ -11,20 +11,17 @@
           "tasks": [
             {
               "title": "Bake bread",
-              "done": false,
-              "addedToToday": false,
+              "done": true,
               "id": 1
             },
             {
               "title": "Clean house",
               "done": false,
-              "addedToToday": false,
               "id": 2
             },
             {
               "title": "Eat candy",
               "done": false,
-              "addedToToday": false,
               "id": 3
             }
           ]
@@ -36,31 +33,26 @@
             {
               "title": "Routing",
               "done": false,
-              "addedToToday": false,
               "id": 4
             },
             {
               "title": "Design site",
-              "done": false,
-              "addedToToday": false,
+              "done": true,
               "id": 5
             },
             {
               "title": "Learn React",
               "done": false,
-              "addedToToday": false,
               "id": 6
             },
             {
               "title": "Set up vite-project",
-              "done": false,
-              "addedToToday": false,
+              "done": true,
               "id": 7
             },
             {
               "title": "Find webhost",
               "done": false,
-              "addedToToday": false,
               "id": 8
             }
           ]
@@ -72,43 +64,36 @@
             {
               "title": "Lion king",
               "done": false,
-              "addedToToday": false,
               "id": 9
             },
             {
               "title": "Me, Earl and the dying girl",
-              "done": false,
-              "addedToToday": false,
+              "done": true,
               "id": 10
             },
             {
               "title": "Die Hard 2",
               "done": false,
-              "addedToToday": false,
               "id": 11
             },
             {
               "title": "The departure",
               "done": false,
-              "addedToToday": false,
               "id": 12
             },
             {
               "title": "Wolf of Wallstreet",
               "done": false,
-              "addedToToday": false,
               "id": 13
             },
             {
               "title": "Titanic",
-              "done": false,
-              "addedToToday": false,
+              "done": true,
               "id": 14
             },
             {
               "title": "A really, really, really, really, really long title",
               "done": false,
-              "addedToToday": false,
               "id": 15
             }
           ]

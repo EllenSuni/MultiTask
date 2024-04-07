@@ -4,7 +4,7 @@ import ProjectRender from "../components/ProjectRender";
 function DashboardPage() {
   return (
     <>
-      <ProjectRender />
+      <ProjectRender quote={'"Hakuna matata"'} />
       <CalendarView />
     </>
   );

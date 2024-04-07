@@ -12,7 +12,6 @@ function LogIn() {
       data.users[0].password.includes(values.password)
     ) {
       setUser({ username: data.users[0].username, isLoggedIn: true });
-      console.log(user);
       localStorage.setItem(
         "user",
         JSON.stringify({ username: data.users[0].username, isLoggedIn: true })
@@ -25,7 +24,11 @@ function LogIn() {
       <h2>Log in</h2>
       {user.email}
       <Formik
-        initialValues={{ email: "ellen@gmail.com", password: "hej" }}
+        initialValues={{
+          email: "ellen@gmail.com",
+          password: "hej",
+          keepLoggedIn: false,
+        }}
         onSubmit={(values) => {
           handleLogin(values);
         }}>
