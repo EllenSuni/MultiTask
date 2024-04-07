@@ -24,7 +24,7 @@ function Header() {
               to="/profile"
               className="link">
               {/* render username instead of email */}
-              {user.email || "Log in"}
+              {user.username || "Log in"}
             </Link>
           </li>
           <li className="dashboard">
