@@ -20,7 +20,7 @@ function App() {
 
       element: (
         <>
-          <Header />
+          <Header quote={'"Hakuna matata"'} />
           <main>
             <h1>MultiTask</h1>
             <Outlet />

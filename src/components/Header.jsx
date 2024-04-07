@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import Context from "../Context";
 
-function Header() {
+function Header({ quote }) {
   const [projects, setProjects] = useState([]),
     { user } = useContext(Context);
 
@@ -25,6 +26,7 @@ function Header() {
               className="link">
               {user.username || "Log in"}
             </Link>
+            <h6>{quote}</h6>
           </li>
           <li className="dashboard">
             <Link
@@ -56,5 +58,9 @@ function Header() {
     </header>
   );
 }
+
+Header.propTypes = {
+  quote: PropTypes.string,
+};
 
 export default Header;

@@ -1,14 +1,10 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Context from "../Context";
-import PropTypes from "prop-types";
+
 import styled from "styled-components";
 
-const Quote = styled.h2`
-    color: #5e5e4a;
-    margin-bottom: 20px;
-  `,
-  Project = styled.div`
+const Project = styled.div`
     border: 1.5px solid #5e5e4a;
     border-radius: 8px;
     box-shadow: 2px 2px 4px #5e5e4a25;
@@ -33,7 +29,7 @@ const Quote = styled.h2`
     color: $dark-color;
     font-size: 1.2rem;
   `;
-function ProjectRender({ quote }) {
+function ProjectRender() {
   const [projects, setProjects] = useState([]);
 
   const { projectName } = useParams(),
@@ -57,8 +53,7 @@ function ProjectRender({ quote }) {
   }, [projectName]);
 
   return (
-    <>
-      <Quote>{quote}</Quote>
+    <div>
       {user.isLoggedIn &&
         projects.map((project) => (
           <Project key={project.projectID}>
@@ -79,12 +74,8 @@ function ProjectRender({ quote }) {
             </div>
           </Project>
         ))}
-    </>
+    </div>
   );
 }
-
-ProjectRender.propTypes = {
-  quote: PropTypes.string,
-};
 
 export default ProjectRender;

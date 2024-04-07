@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Context from "../Context";
 
 function Profile() {
-  const { setUser } = useContext(Context);
+  const { user, setUser } = useContext(Context);
 
   function handleLogOut() {
     setUser({ isLoggedIn: false });
@@ -11,7 +11,7 @@ function Profile() {
 
   return (
     <>
-      <h1>Logged in!</h1>
+      <h1>Welcome {user.username}!</h1>
       <button onClick={handleLogOut}>Log out</button>
     </>
   );
