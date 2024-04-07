@@ -1,50 +1,17 @@
 @import "./variables";
 
-.quote {
-  color: $dark-color;
-  margin-bottom: 20px;
-}
+.project__task__checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
 
-.project {
-  border: 1.5px solid $dark-color;
-  border-radius: 8px;
-  box-shadow: 2px 2px 4px #5e5e4a25;
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  padding: 16px 29px;
-
-  &__heading {
-    color: $dark-color;
-    text-decoration: underline;
-    align-self: center;
-  }
-
-  &__task {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    &__checkbox {
-      position: relative;
-      width: 20px;
-      height: 20px;
-
-      &::before {
-        visibility: visible;
-        content: "";
-        width: 18px;
-        height: 18px;
-        border: 1.5px solid $dark-color;
-        border-radius: 4px;
-        position: absolute;
-      }
-    }
-
-    &__title {
-      color: $dark-color;
-      font-size: 1.2rem;
-    }
+  &::before {
+    visibility: visible;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid $dark-color;
+    border-radius: 4px;
+    position: absolute;
   }
 }

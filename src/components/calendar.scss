@@ -6,6 +6,7 @@
   color: $light-color;
   padding: 20px;
   border-radius: 8px;
+  margin-top: 20px;
 
   &__navigation {
     display: flex;
@@ -13,6 +14,7 @@
 
     &__arrow,
     &__label {
+      padding: 0;
       font-family: inherit;
       color: inherit;
       font-size: 2rem;

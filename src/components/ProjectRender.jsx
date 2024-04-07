@@ -2,7 +2,37 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Context from "../Context";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
+const Quote = styled.h2`
+    color: #5e5e4a;
+    margin-bottom: 20px;
+  `,
+  Project = styled.div`
+    border: 1.5px solid #5e5e4a;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #5e5e4a25;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 16px 29px;
+    margin-bottom: 15px;
+  `,
+  ProjectHeading = styled.h2`
+    color: #5e5e4a;
+    text-decoration: underline;
+    align-self: center;
+  `,
+  ProjectTask = styled.div`
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  `,
+  ProjectTaskTitle = styled.label`
+    color: $dark-color;
+    font-size: 1.2rem;
+  `;
 function ProjectRender({ quote }) {
   const [projects, setProjects] = useState([]);
 
@@ -28,32 +58,26 @@ function ProjectRender({ quote }) {
 
   return (
     <>
-      <h2 className="quote">{quote}</h2>
+      <Quote>{quote}</Quote>
       {user.isLoggedIn &&
         projects.map((project) => (
-          <div
-            className="project"
-            key={project.projectID}>
-            <h2 className="project__heading">{projectName || project.name}</h2>
+          <Project key={project.projectID}>
+            <ProjectHeading>{projectName || project.name}</ProjectHeading>
             <div>
               {project.tasks.map((task) => (
-                <div
-                  key={task.id}
-                  className="project__task">
+                <ProjectTask key={task.id}>
                   <input
                     type="checkbox"
                     className="project__task__checkbox"
                     id={task.id}
                   />
-                  <label
-                    className="project__task__title"
-                    htmlFor={task.id}>
+                  <ProjectTaskTitle htmlFor={task.id}>
                     {task.title}
-                  </label>
-                </div>
+                  </ProjectTaskTitle>
+                </ProjectTask>
               ))}
             </div>
-          </div>
+          </Project>
         ))}
     </>
   );
